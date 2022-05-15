@@ -1,7 +1,5 @@
 ~~~Scala
 // Kafka提交到Redis（可以替换MySQL），精确一次消费，将json数据转换为json格式，然后经过处理转换为json格式发送给kafka
-package com.atguigu.gmall.realtime.app
-
 import java.lang
 
 import com.alibaba.fastjson.serializer.SerializeConfig

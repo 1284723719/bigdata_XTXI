@@ -1,7 +1,5 @@
 ~~~Scala
 //Kafka提交offset到MySQL
-package com.atguigu.gmall.realtime.app
-
 import java.sql.{DriverManager, ResultSet}
 import org.apache.kafka.clients.consumer.ConsumerRecord
 import org.apache.kafka.common.TopicPartition
