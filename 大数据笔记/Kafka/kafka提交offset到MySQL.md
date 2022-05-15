@@ -126,6 +126,6 @@ object sparkceui {
       pstmt.close()
       connection.close()
     }
-  }
+  }}
 ~~~
 
