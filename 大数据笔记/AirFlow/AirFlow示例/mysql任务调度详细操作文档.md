@@ -23,7 +23,7 @@
 
 -   页面添加connection
 
-    ![](images/airflow的mysql数据库连接.png)
+    ![](https://s2.loli.net/2022/05/19/pM8OZla3b6jBmVz.png)
 
 -   创建airflow任务，实现以下2个需求：
 
@@ -68,7 +68,7 @@
 
         3.  运行日志：
 
-            ![](images/调度mysql任务结果日志.png)
+            ![](https://s2.loli.net/2022/05/19/C675OTh8FxArI4p.png)
 
     -   需求1实现的第二种方式
 
