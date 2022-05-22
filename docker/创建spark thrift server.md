@@ -20,7 +20,7 @@ vim hive-site.xml
 </property>
 <property>
     <name>hive.server2.thrift.bind.host</name>
-    <value>spark.bigdata.cn</value>
+    <value>spark01</value>
 </property>
 ```
 
@@ -87,11 +87,11 @@ cp /opt/apache-hive-2.1.0-bin/lib/mysql-connector-java-5.1.38.jar .
 
     ```shell
     root@cb338fa74260 hadoop]# jps -vm | grep 6017   
-    6017 ExecutorLauncher --arg spark.bigdata.cn:37890 --properties-file /tmp/hadoop-root/nm-local-dir/usercache/root/appcache/application_1608087619253_0001/container_1608087619253_0001_01_000001/__spark_conf__/__spark_conf__.properties -Xmx512m -Djava.io.tmpdir=/tmp/hadoop-root/nm-local-dir/usercache/root/appcache/application_1608087619253_0001/container_1608087619253_0001_01_000001/tmp -Dspark.yarn.app.container.log.dir=/opt/hadoop-2.7.0/logs/userlogs/application_1608087619253_0001/container_1608087619253_0001_01_000001
+    6017 ExecutorLauncher --arg spark01:37890 --properties-file /tmp/hadoop-root/nm-local-dir/usercache/root/appcache/application_1608087619253_0001/container_1608087619253_0001_01_000001/__spark_conf__/__spark_conf__.properties -Xmx512m -Djava.io.tmpdir=/tmp/hadoop-root/nm-local-dir/usercache/root/appcache/application_1608087619253_0001/container_1608087619253_0001_01_000001/tmp -Dspark.yarn.app.container.log.dir=/opt/hadoop-2.7.0/logs/userlogs/application_1608087619253_0001/container_1608087619253_0001_01_000001
     [root@cb338fa74260 hadoop]# jps -vm | grep CoarseGrainedExecutorBackend
-    6054 CoarseGrainedExecutorBackend --driver-url spark://CoarseGrainedScheduler@spark.bigdata.cn:37890 --executor-id 1 --hostname hadoop.bigdata.cn --cores 1 --app-id application_1608087619253_0001 --user-class-path file:/tmp/hadoop-root/nm-local-dir/usercache/root/appcache/application_1608087619253_0001/container_1608087619253_0001_01_000002/__app__.jar -Xmx1024m -Djava.io.tmpdir=/tmp/hadoop-root/nm-local-dir/usercache/root/appcache/application_1608087619253_0001/container_1608087619253_0001_01_000002/tmp -Dspark.driver.port=37890 -Dspark.yarn.app.container.log.dir=/opt/hadoop-2.7.0/logs/userlogs/application_1608087619253_0001/container_1608087619253_0001_01_000002 -XX:OnOutOfMemoryError=kill %p
-    6102 CoarseGrainedExecutorBackend --driver-url spark://CoarseGrainedScheduler@spark.bigdata.cn:37890 --executor-id 3 --hostname hadoop.bigdata.cn --cores 1 --app-id application_1608087619253_0001 --user-class-path file:/tmp/hadoop-root/nm-local-dir/usercache/root/appcache/application_1608087619253_0001/container_1608087619253_0001_01_000004/__app__.jar -Xmx1024m -Djava.io.tmpdir=/tmp/hadoop-root/nm-local-dir/usercache/root/appcache/application_1608087619253_0001/container_1608087619253_0001_01_000004/tmp -Dspark.driver.port=37890 -Dspark.yarn.app.container.log.dir=/opt/hadoop-2.7.0/logs/userlogs/application_1608087619253_0001/container_1608087619253_0001_01_000004 -XX:OnOutOfMemoryError=kill %p
-    6079 CoarseGrainedExecutorBackend --driver-url spark://CoarseGrainedScheduler@spark.bigdata.cn:37890 --executor-id 2 --hostname hadoop.bigdata.cn --cores 1 --app-id application_1608087619253_0001 --user-class-path file:/tmp/hadoop-root/nm-local-dir/usercache/root/appcache/application_1608087619253_0001/container_1608087619253_0001_01_000003/__app__.jar -Xmx1024m -Djava.io.tmpdir=/tmp/hadoop-root/nm-local-dir/usercache/root/appcache/application_1608087619253_0001/container_1608087619253_0001_01_000003/tmp -Dspark.driver.port=37890 -Dspark.yarn.app.container.log.dir=/opt/hadoop-2.7.0/logs/userlogs/application_1608087619253_0001/container_1608087619253_0001_01_000003 -XX:OnOutOfMemoryError=kill %p
+    6054 CoarseGrainedExecutorBackend --driver-url spark://CoarseGrainedScheduler@spark01:37890 --executor-id 1 --hostname hadoop.bigdata.cn --cores 1 --app-id application_1608087619253_0001 --user-class-path file:/tmp/hadoop-root/nm-local-dir/usercache/root/appcache/application_1608087619253_0001/container_1608087619253_0001_01_000002/__app__.jar -Xmx1024m -Djava.io.tmpdir=/tmp/hadoop-root/nm-local-dir/usercache/root/appcache/application_1608087619253_0001/container_1608087619253_0001_01_000002/tmp -Dspark.driver.port=37890 -Dspark.yarn.app.container.log.dir=/opt/hadoop-2.7.0/logs/userlogs/application_1608087619253_0001/container_1608087619253_0001_01_000002 -XX:OnOutOfMemoryError=kill %p
+    6102 CoarseGrainedExecutorBackend --driver-url spark://CoarseGrainedScheduler@spark01:37890 --executor-id 3 --hostname hadoop.bigdata.cn --cores 1 --app-id application_1608087619253_0001 --user-class-path file:/tmp/hadoop-root/nm-local-dir/usercache/root/appcache/application_1608087619253_0001/container_1608087619253_0001_01_000004/__app__.jar -Xmx1024m -Djava.io.tmpdir=/tmp/hadoop-root/nm-local-dir/usercache/root/appcache/application_1608087619253_0001/container_1608087619253_0001_01_000004/tmp -Dspark.driver.port=37890 -Dspark.yarn.app.container.log.dir=/opt/hadoop-2.7.0/logs/userlogs/application_1608087619253_0001/container_1608087619253_0001_01_000004 -XX:OnOutOfMemoryError=kill %p
+    6079 CoarseGrainedExecutorBackend --driver-url spark://CoarseGrainedScheduler@spark01:37890 --executor-id 2 --hostname hadoop.bigdata.cn --cores 1 --app-id application_1608087619253_0001 --user-class-path file:/tmp/hadoop-root/nm-local-dir/usercache/root/appcache/application_1608087619253_0001/container_1608087619253_0001_01_000003/__app__.jar -Xmx1024m -Djava.io.tmpdir=/tmp/hadoop-root/nm-local-dir/usercache/root/appcache/application_1608087619253_0001/container_1608087619253_0001_01_000003/tmp -Dspark.driver.port=37890 -Dspark.yarn.app.container.log.dir=/opt/hadoop-2.7.0/logs/userlogs/application_1608087619253_0001/container_1608087619253_0001_01_000003 -XX:OnOutOfMemoryError=kill %p
     ```
 
   - 查看服务的spark监控页面
@@ -106,21 +106,21 @@ cp /opt/apache-hive-2.1.0-bin/lib/mysql-connector-java-5.1.38.jar .
 
   ```shell
   beeline
-  !connect jdbc:hive2://spark.bigdata.cn:10001
+  !connect jdbc:hive2://spark01:10001
   
   [root@c5836fa7593c conf]# beeline
   Beeline version 1.2.1.spark2 by Apache Hive
-  beeline> !connect jdbc:hive2://spark.bigdata.cn:10001
-  Connecting to jdbc:hive2://spark.bigdata.cn:10001
-  Enter username for jdbc:hive2://spark.bigdata.cn:10001: root
-  Enter password for jdbc:hive2://spark.bigdata.cn:10001: 
-  20/12/11 07:20:04 INFO jdbc.Utils: Supplied authorities: spark.bigdata.cn:10001
-  20/12/11 07:20:04 INFO jdbc.Utils: Resolved authority: spark.bigdata.cn:10001
-  20/12/11 07:20:04 INFO jdbc.HiveConnection: Will try to open client transport with JDBC Uri: jdbc:hive2://spark.bigdata.cn:10001
+  beeline> !connect jdbc:hive2://spark01:10001
+  Connecting to jdbc:hive2://spark01:10001
+  Enter username for jdbc:hive2://spark01:10001: root
+  Enter password for jdbc:hive2://spark01:10001: 
+  20/12/11 07:20:04 INFO jdbc.Utils: Supplied authorities: spark01:10001
+  20/12/11 07:20:04 INFO jdbc.Utils: Resolved authority: spark01:10001
+  20/12/11 07:20:04 INFO jdbc.HiveConnection: Will try to open client transport with JDBC Uri: jdbc:hive2://spark01:10001
   Connected to: Spark SQL (version 2.4.7)
   Driver: Hive JDBC (version 1.2.1.spark2)
   Transaction isolation: TRANSACTION_REPEATABLE_READ
-  0: jdbc:hive2://spark.bigdata.cn:10001> show databases;
+  0: jdbc:hive2://spark01:10001> show databases;
   +---------------+--+
   | databaseName  |
   +---------------+--+

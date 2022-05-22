@@ -26,7 +26,7 @@ vim hive-site.xml
     </property>
     <property>
         <name>fs.defaultFS</name>
-        <value>hdfs://hadoop.bigdata.cn:9000</value>
+        <value>hdfs://hadoop01:9000</value>
     </property>
     <property>
         <name>javax.jdo.option.ConnectionUserName</name>
@@ -38,7 +38,7 @@ vim hive-site.xml
     </property>
     <property>
         <name>javax.jdo.option.ConnectionURL</name>
-        <value>jdbc:mysql://mysql.bigdata.cn:3306/hive?createDatabaseIfNotExist=true&amp;useSSL=false&amp;characterEncoding=UTF-8</value>
+        <value>jdbc:mysql://mysql01:3306/hive?createDatabaseIfNotExist=true&amp;useSSL=false&amp;characterEncoding=UTF-8</value>
     </property>
     <property>
         <name>javax.jdo.option.ConnectionDriverName</name>
@@ -54,11 +54,11 @@ vim hive-site.xml
     </property>
     <property>
         <name>hive.server2.thrift.bind.host</name>
-        <value>hive.bigdata.cn</value>
+        <value>hive01</value>
     </property>
     <property>
         <name>hive.metastore.uris</name>
-        <value>thrift://hive.bigdata.cn:9083</value>
+        <value>thrift://hive01:9083</value>
     </property>
 </configuration>
 ```
@@ -94,7 +94,7 @@ vim hive-site.xml
   docker run \
   --privileged=true \
   --net docker-bd0 \
-  --ip 172.33.0.131 \
+  --ip 192.168.88.102 \
   -v /mnt/docker_share:/mnt/docker_share \
   -v /etc/hosts:/etc/hosts \
   -v /opt/hadoop-2.7.0:/opt/hadoop-2.7.0 \

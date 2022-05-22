@@ -51,7 +51,7 @@ mv /opt/sqoop/lib/OJDBC-Full/* /opt/sqoop/lib
   docker run \
   --privileged=true \
   --net docker-bd0 \
-  --ip 172.33.0.110 \
+  --ip 192.168.88.104 \
   -v /mnt/docker_share:/mnt/docker_share \
   -v /etc/hosts:/etc/hosts \
   -v /opt/hadoop-2.7.0:/opt/hadoop-2.7.0 \
@@ -95,7 +95,7 @@ mv /opt/sqoop/lib/OJDBC-Full/* /opt/sqoop/lib
 
     ```shell
     sqoop list-databases \
-    --connect jdbc:oracle:thin:@oracle.bigdata.cn:1521:helowin \
+    --connect jdbc:oracle:thin:@oracle01:1521:helowin \
     --username ciss \
     --password 123456
     ```
@@ -107,7 +107,7 @@ mv /opt/sqoop/lib/OJDBC-Full/* /opt/sqoop/lib
     
     # 导出一个表测试
     sqoop import \
-    --connect jdbc:oracle:thin:@oracle.bigdata.cn:1521:helowin \
+    --connect jdbc:oracle:thin:@oracle01:1521:helowin \
     --username ciss \
     --password 123456 \
     --warehouse-dir /data/test/CISS_BASE_AREAS \

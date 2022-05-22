@@ -38,7 +38,7 @@ export SPARK_HOME=/opt/spark-2.4.7-bin-hadoop2.7
 export SPARK_MASTER_IP=spark.bigdata.cn
 export SPARK_EXECUTOR_MEMORY=2G
 export HADOOP_CONF_DIR=/opt/hadoop-2.7.0/etc/hadoop
-export SPARK_HISTORY_OPTS="-Dspark.history.ui.port=18080 -Dspark.history.retainedApplications=200 -Dspark.history.fs.logDirectory=hdfs://hadoop.bigdata.cn:9000/tmp/spark-history"
+export SPARK_HISTORY_OPTS="-Dspark.history.ui.port=18080 -Dspark.history.retainedApplications=200 -Dspark.history.fs.logDirectory=hdfs://hadoop01:9000/tmp/spark-history"
 ```
 
 ## 配置集群节点
@@ -57,7 +57,7 @@ spark.bigdata.cn
   docker run \
   --privileged=true \
   --net docker-bd0 \
-  --ip 172.33.0.133 \
+  --ip 192.168.88.103 \
   -v /mnt/docker_share:/mnt/docker_share \
   -v /etc/hosts:/etc/hosts \
   -v /opt/hadoop-2.7.0:/opt/hadoop-2.7.0 \

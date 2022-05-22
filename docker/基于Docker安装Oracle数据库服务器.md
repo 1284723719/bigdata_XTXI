@@ -16,7 +16,7 @@
 
 - 创建容器，并将1521端口映射到Linux宿主机端口
 
-  `docker run --net docker-bd0 --ip 172.33.0.100 -d -p 1521:1521 --name oracle 3fa112fd3642`
+  `docker run --net docker-bd0 --ip 192.168.88.100 -d -p 1521:1521 --name oracle 3fa112fd3642`
 
 ## 查看Oracle容器
 

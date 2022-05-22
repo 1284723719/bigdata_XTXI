@@ -40,7 +40,7 @@ mkdir -p /data/dfs/dn
 
 ```SHELL
 docker run \
---net docker-bd0 --ip 172.33.0.121 \
+--net docker-bd0 --ip  192.168.88.101 \
 -p 50070:50070 -p 8088:8088 -p 19888:19888 \
 -v /mnt/docker_share:/mnt/docker_share \
 -v /etc/hosts:/etc/hosts \
@@ -134,7 +134,7 @@ source /etc/profile
   ```xml
     <property>
       <name>fs.defaultFS</name>
-      <value>hdfs://hadoop.bigdata.cn:9000</value>
+      <value>hdfs://hadoop01:9000</value>
     </property>
     <property>
       <name>hadoop.proxyuser.root.hosts</name>
@@ -155,11 +155,11 @@ source /etc/profile
   ```xml
     <property>
       <name>dfs.namenode.http-address</name>
-      <value>hadoop.bigdata.cn:50070</value>
+      <value>hadoop01:50070</value>
     </property>
     <property>
       <name>dfs.namenode.secondary.http-address</name>
-      <value>hadoop.bigdata.cn:50090</value>
+      <value>hadoop01:50090</value>
     </property>
     <property>
       <name>dfs.replication</name>
@@ -192,7 +192,7 @@ source /etc/profile
     </property>
     <property>
       <name>yarn.resourcemanager.hostname</name>
-      <value>hadoop.bigdata.cn</value>
+      <value>hadoop01</value>
     </property>
     <property>
       <name>yarn.log-aggregation-enable</name>
@@ -213,11 +213,11 @@ source /etc/profile
     </property>
     <property>
       <name>mapreduce.jobhistory.address</name>
-      <value>hadoop.bigdata.cn:10020</value>
+      <value>hadoop01:10020</value>
     </property>
     <property>
       <name>mapreduce.jobhistory.webapp.address</name>
-      <value>hadoop.bigdata.cn:19888</value>
+      <value>hadoop01:19888</value>
     </property>
     <property>
       <name>mapreduce.jobhistory.intermediate-done-dir</name>
@@ -334,10 +334,10 @@ chmod 755 /etc/rc.d/rc.local
 - 添加以下映射（此处可以把规划好的域名映射都加进来）
 
   ```
-  192.168.10.100 hadoop.bigdata.cn
-  192.168.10.100 hive.bigdata.cn
-  192.168.10.100 mysql.bigdata.cn
-  192.168.10.100 oracle.bigdata.cn
+  192.168.10.100 hadoop01
+  192.168.10.100 hive01
+  192.168.10.100 mysql01
+  192.168.10.100 oracle01
   ```
 
   
